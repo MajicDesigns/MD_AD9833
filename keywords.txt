@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+MD_AD9833	KEYWORD1
+channel_t	KEYWORD1
+mode_t	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+getMode	KEYWORD2
+setMode	KEYWORD2
+getActiveFrequency	KEYWORD2
+setActiveFrequency	KEYWORD2
+getFrequency	KEYWORD2
+setFrequency	KEYWORD2
+getActivePhase	KEYWORD2
+setActivePhase	KEYWORD2
+getPhase	KEYWORD2
+setPhase	KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
+
+CHAN_0	LITERAL1
+CHAN_1	LITERAL1
+MODE_OFF	LITERAL1
+MODE_SINE	LITERAL1
+MODE_SQUARE1	LITERAL1
+MODE_SQUARE2	LITERAL1
+MODE_TRIANGLE	LITERAL1
