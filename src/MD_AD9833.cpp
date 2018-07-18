@@ -118,8 +118,8 @@ void MD_AD9833::begin(void)
   }
 
   // initialise our preferred CS pin (could be same as SS)
-  digitalWrite(_fsyncPin, HIGH);
   pinMode(_fsyncPin, OUTPUT);
+  digitalWrite(_fsyncPin, HIGH);
 
   // Initialise the AD9833 and then set up safe values for the AD9833 device
   // Procedure from Figure 27 of in the AD9833 Data Sheet
