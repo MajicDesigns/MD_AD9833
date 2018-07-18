@@ -69,6 +69,7 @@ var NAVTREEINDEX0 =
 "index.html":[0],
 "index.html":[],
 "page_copyright.html":[0,1],
+"page_donation.html":[0,2],
 "page_rev_history.html":[0,0],
 "pages.html":[]
 };

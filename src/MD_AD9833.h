@@ -22,13 +22,19 @@ This library features access to all on-chip features though an abstracted
 class and methods to coordinate register changes to implement user-level
 functionality.
 
-
+Topics
+------
 - \subpage pageRevHistory
 - \subpage pageCopyright
+- \subpage pageDonation
+
+\page pageDonation Support the Library
+If you like and use this library please consider making a small donation using [PayPal](https://paypal.me/MajicDesigns/4USD)
 
 \page pageRevHistory Revision History
-Revision History 
-----------------
+Jul 2018 version 1.1.1
+- Minor Documentation updates, added LICENCE
+
 Jan 2018 version 1.1.0
 - Minor updates and changes
 
@@ -36,8 +42,6 @@ Feb 2016 version 1.0.0
 - Initial version created
 
 \page pageCopyright Copyright
-Copyright
----------
 Copyright (C) 2016 Marco Colli. All rights reserved.
 
 This library is free software; you can redistribute it and/or

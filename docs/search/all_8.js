@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['support_20the_20library',['Support the Library',['../page_donation.html',1,'index']]],
   ['setactivefrequency',['setActiveFrequency',['../class_m_d___a_d9833.html#a959b40e8914d47343e24c002169c7cfe',1,'MD_AD9833']]],
   ['setactivephase',['setActivePhase',['../class_m_d___a_d9833.html#a0b64736e63aa654bede19358cca3588c',1,'MD_AD9833']]],
   ['setfrequency',['setFrequency',['../class_m_d___a_d9833.html#ab04b9265aee43cbc5678ff7772ee0c1f',1,'MD_AD9833']]],
