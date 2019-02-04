@@ -199,7 +199,7 @@ class MD_AD9833
   * \param chan output channel identifier (channel_t)
   * \return the last frequency setting for the specified channel
   */
-  inline uint32_t getFrequency(channel_t chan) { return _freq[chan]; };
+  inline float getFrequency(channel_t chan) const { return _freq[chan]; };
 
   /**
   * Set channel frequency
@@ -210,7 +210,7 @@ class MD_AD9833
   * \param freq frequency in Hz
   * \return true if successful, false otherwise
   */
-  boolean setFrequency(channel_t chan, uint32_t freq);
+  boolean setFrequency(channel_t chan, float freq);
 
   /** @} */
 
@@ -270,8 +270,8 @@ private:
 
   // Settings memory
   mode_t    _modeLast;    // last set mode
-  uint32_t  _freq[2];     // last frequencies set
-  uint16_t   _phase[2];   // last phase setting
+  float     _freq[2];     // last frequencies set
+  uint16_t  _phase[2];    // last phase setting
 
   // SPI interface data
   uint8_t	_dataPin;	  	// DATA is shifted out of this pin ...
