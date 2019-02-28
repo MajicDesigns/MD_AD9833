@@ -229,7 +229,7 @@ boolean MD_AD9833::setMode(mode_t mode)
   return(true);
 }
 
-boolean MD_AD9833::setFrequency(channel_t chan, uint32_t freq)
+boolean MD_AD9833::setFrequency(channel_t chan, float freq)
 {
   uint16_t  freq_select;
 
