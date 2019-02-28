@@ -1,7 +1,7 @@
 /*
 MD_AD9833 - Library for controlling an AD9833 Programmable Waveform Generator.
 
-See the main headre file for full information
+See the main header file for full information
 */
 #include <SPI.h>
 #include "MD_AD9833.h"
@@ -253,8 +253,8 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
   // B28 is set by default for the library
   // Now send the two parts of the frequency 14 bits at a time,
   // LSBs first
-  spiSend(freq_select | (uint16_t)(_regFreq[chan] & 0x3fff));
-  spiSend(freq_select | (uint16_t)((_regFreq[chan] >> 14) & 0x3fff));
+  spiSend(freq_select | (uint16_t)((uint32_t)_regFreq[chan] & 0x3fff));
+  spiSend(freq_select | (uint16_t)((uint32_t)_regFreq[chan] >> 14) & 0x3fff));
 
   return(true);
 }

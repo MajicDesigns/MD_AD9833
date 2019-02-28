@@ -34,7 +34,7 @@ void setup()
 
 void usage(void)
 {
-  Serial.print(F("\n\n[MD_DS3231_Tester]"));
+  Serial.print(F("\n\n[MD_AD9833_Tester]"));
   Serial.print(F("\n?\thelp - this message"));
   Serial.print(F("\n\n:<cmd><opt> <param>;"));
   Serial.print(F("\n:f1n;\tset frequency 1 to n Hz"));

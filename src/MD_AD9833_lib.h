@@ -10,7 +10,7 @@ See the main header file for full information
 * \brief Includes library-only definitions for AD_9833 library
 */
 
-#define	AD_DEBUG	0		///< Enable or disable (default) debugging output from the MD_MAX72xx library
+#define	AD_DEBUG	0		///< Enable or disable (default) debugging output from the MD_AD9833 library
 
 #if AD_DEBUG
 #define	PRINT(s, v)		{ Serial.print(F(s)); Serial.print(v); }		  ///< Print a string followed by a value (decimal)
@@ -87,9 +87,9 @@ const uint8_t AD_PHASE = 13;    ///< Select the phase register
 #define AD_2POW28 (1UL << 28) ///< Used when calculating output frequency
 
 /** Macro to calculate register value for AD9833 frequency register from a frequency */
-#define FREQ_CALC(f) (uint32_t)(round(f*(double)AD_2POW28/(double)AD_MCLK))
+#define FREQ_CALC(f) (float)(round(f*(double)AD_2POW28/(double)AD_MCLK))
 
 /** Macro to calculate the value for AD9833 phase register from given phase in tenths of a degree */
-#define CALC_PHASE(a) (uint16_t)(512.0*(float)(a/10)/45.0)
+#define CALC_PHASE(a) (uint16_t)(512.0*((float)a/10.0)/45.0)
 
 /** @} */

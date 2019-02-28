@@ -32,6 +32,10 @@ Topics
 If you like and use this library please consider making a small donation using [PayPal](https://paypal.me/MajicDesigns/4USD)
 
 \page pageRevHistory Revision History
+Feb 2019 version 1.1.2
+- Changed frequency to float type
+- Some minor spelling errors
+
 Jul 2018 version 1.1.1
 - Minor Documentation updates, added LICENCE
 
