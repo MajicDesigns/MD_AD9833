@@ -254,7 +254,7 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
   // Now send the two parts of the frequency 14 bits at a time,
   // LSBs first
   spiSend(freq_select | (uint16_t)((uint32_t)_regFreq[chan] & 0x3fff));
-  spiSend(freq_select | (uint16_t)((uint32_t)_regFreq[chan] >> 14) & 0x3fff));
+  spiSend(freq_select | (uint16_t)(((uint32_t)_regFreq[chan] >> 14) & 0x3fff));
 
   return(true);
 }
