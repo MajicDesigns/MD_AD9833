@@ -86,10 +86,4 @@ const uint8_t AD_PHASE = 13;    ///< Select the phase register
 #define AD_MCLK   25000000UL  ///< Clock speed of the AD9833 reference clock in Hz
 #define AD_2POW28 (1UL << 28) ///< Used when calculating output frequency
 
-/** Macro to calculate register value for AD9833 frequency register from a frequency */
-#define FREQ_CALC(f) (float)(round(f*(double)AD_2POW28/(double)AD_MCLK))
-
-/** Macro to calculate the value for AD9833 phase register from given phase in tenths of a degree */
-#define CALC_PHASE(a) (uint16_t)(512.0*((float)a/10.0)/45.0)
-
 /** @} */

@@ -28,10 +28,11 @@ Topics
 - \subpage pageCopyright
 - \subpage pageDonation
 
-\page pageDonation Support the Library
-If you like and use this library please consider making a small donation using [PayPal](https://paypal.me/MajicDesigns/4USD)
-
 \page pageRevHistory Revision History
+Feb 2019 version 1.1.3
+- Fixed compile error at MD_AD9833.cpp:257:77
+- Some minor reorganizing of code
+
 Feb 2019 version 1.1.2
 - Changed frequency to float type
 - Some minor spelling errors
@@ -44,6 +45,9 @@ Jan 2018 version 1.1.0
 
 Feb 2016 version 1.0.0
 - Initial version created
+
+\page pageDonation Support the Library
+If you like and use this library please consider making a small donation using [PayPal](https://paypal.me/MajicDesigns/4USD)
 
 \page pageCopyright Copyright
 Copyright (C) 2016 Marco Colli. All rights reserved.
@@ -278,12 +282,16 @@ private:
   uint16_t  _phase[2];    // last phase setting
 
   // SPI interface data
-  uint8_t	_dataPin;	  	// DATA is shifted out of this pin ...
-  uint8_t	_clkPin;	  	// ... signaled by a CLOCK on this pin ...
-  uint8_t	_fsyncPin;		// ... and LOADed when the fsync pin is driven HIGH to LOW
-  bool		_hardwareSPI;	// true if SPI interface is the hardware interface
+  uint8_t _dataPin;     // DATA is shifted out of this pin ...
+  uint8_t _clkPin;      // ... signaled by a CLOCK on this pin ...
+  uint8_t	_fsyncPin;    // ... and LOADed when the fsync pin is driven HIGH to LOW
+  bool    _hardwareSPI; // true if SPI interface is the hardware interface
+  
+  // Convenience calculations
+  uint32_t calcFreq(float f); // Calculate AD9833 frequency register from a frequency
+  uint16_t calcPhase(float a);// Calculate AD9833 phase register from phase
 
   // SPI related 
   void dumpCmd(uint16_t reg);       // debug routine
-  void spiSend(uint16_t data);			// do the actual physical communications task
+  void spiSend(uint16_t data);      // do the actual physical communications task
 };

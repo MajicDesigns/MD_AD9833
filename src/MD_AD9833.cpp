@@ -51,7 +51,7 @@ void MD_AD9833::spiSend(uint16_t data)
 // Sometimes the hardware shift does not appear to work reliably with the hardware - 
 // similar problems also reported on the internet.
 // The dedicated routine below is modelled on the flow and timing on the datasheet
-// and seems to works reliably, but is much slower than thre hardware interface.
+// and seems to works reliably, but is much slower than the hardware interface.
 {
 #if AD_DEBUG
   PRINTX("\nspiSend", data);
@@ -229,6 +229,18 @@ boolean MD_AD9833::setMode(mode_t mode)
   return(true);
 }
 
+uint32_t MD_AD9833::calcFreq(float f) 
+// Calculate register value for AD9833 frequency register from a frequency
+{ 
+  return (uint32_t)((f * AD_2POW28/AD_MCLK) + 0.5);
+}
+
+uint16_t MD_AD9833::calcPhase(float a) 
+// Calculate the value for AD9833 phase register from given phase in tenths of a degree
+{
+  return (uint16_t)((512.0 * (a/10) / 45) + 0.5);
+}
+
 boolean MD_AD9833::setFrequency(channel_t chan, float freq)
 {
   uint16_t  freq_select;
@@ -237,7 +249,7 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
 
   _freq[chan] = freq;
 
-  _regFreq[chan] = FREQ_CALC(freq);
+  _regFreq[chan] = calcFreq(freq);
 
   PRINT(" - freq ", _freq[chan]);
   PRINTX(" =", _regFreq[chan]);
@@ -253,8 +265,8 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
   // B28 is set by default for the library
   // Now send the two parts of the frequency 14 bits at a time,
   // LSBs first
-  spiSend(freq_select | (uint16_t)((uint32_t)_regFreq[chan] & 0x3fff));
-  spiSend(freq_select | (uint16_t)(((uint32_t)_regFreq[chan] >> 14) & 0x3fff));
+  spiSend(freq_select | (uint16_t)(_regFreq[chan] & 0x3fff));
+  spiSend(freq_select | (uint16_t)(_regFreq[chan] >> 14) & 0x3fff);
 
   return(true);
 }
@@ -266,7 +278,7 @@ boolean MD_AD9833::setPhase(channel_t chan, uint16_t phase)
   PRINT("\nsetPhase CHAN_", chan);
 
   _phase[chan] = phase;
-  _regPhase[chan] = CALC_PHASE(phase);
+  _regPhase[chan] = calcPhase(phase);
 
   PRINT(" - phase ", _phase[chan]);
   PRINTX(" =", _regPhase[chan]);
