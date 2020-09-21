@@ -5,8 +5,6 @@ var _m_d___a_d9833__lib_8h =
     [ "AD_DEFAULT_FREQ", "_m_d___a_d9833__lib_8h.html#a731ccdb392ba583e1d043b93f774b9c2", null ],
     [ "AD_DEFAULT_PHASE", "_m_d___a_d9833__lib_8h.html#ab3c93b4a621f32854a50f513ebe309c9", null ],
     [ "AD_MCLK", "_m_d___a_d9833__lib_8h.html#ab74ab9f13c2d363a3ba28b1eb2ea406c", null ],
-    [ "CALC_PHASE", "_m_d___a_d9833__lib_8h.html#a84548fe3c7fd0c67dc660fcc7f583239", null ],
-    [ "FREQ_CALC", "_m_d___a_d9833__lib_8h.html#a778702f4931dd6dc8ef14fff2ecb77b8", null ],
     [ "PRINT", "_m_d___a_d9833__lib_8h.html#a1696fc35fb931f8c876786fbc1078ac4", null ],
     [ "PRINTB", "_m_d___a_d9833__lib_8h.html#a71d5d719d30a3cb9ec26a38c6cc6e269", null ],
     [ "PRINTS", "_m_d___a_d9833__lib_8h.html#ad68f35c3cfe67be8d09d1cea8e788e13", null ],

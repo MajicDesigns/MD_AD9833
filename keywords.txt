@@ -25,6 +25,7 @@ getActivePhase	KEYWORD2
 setActivePhase	KEYWORD2
 getPhase	KEYWORD2
 setPhase	KEYWORD2
+reset	KEYWORD2
 
 ######################################
 # Constants (LITERAL1)

@@ -17,12 +17,13 @@ var class_m_d___a_d9833 =
     [ "begin", "class_m_d___a_d9833.html#a9b5f5ad39d22af155c6fd85dcec7cf89", null ],
     [ "getActiveFrequency", "class_m_d___a_d9833.html#a947eef2d0f5ccb8e56441b741f1d7487", null ],
     [ "getActivePhase", "class_m_d___a_d9833.html#ab8663778999fd5b1262f7f2661bd4bb9", null ],
-    [ "getFrequency", "class_m_d___a_d9833.html#abfb44b908e3efea8ae0422f89b063a7e", null ],
+    [ "getFrequency", "class_m_d___a_d9833.html#a592ebc9c1c8a63496d9e6941818e6965", null ],
     [ "getMode", "class_m_d___a_d9833.html#a18b799d4b2f1162bfcd68a2c81f6c571", null ],
     [ "getPhase", "class_m_d___a_d9833.html#aa825c7a6896ba1fc1a2b2943053f8336", null ],
+    [ "reset", "class_m_d___a_d9833.html#a31bdf3f3366d336c46787284c9262c1a", null ],
     [ "setActiveFrequency", "class_m_d___a_d9833.html#a959b40e8914d47343e24c002169c7cfe", null ],
     [ "setActivePhase", "class_m_d___a_d9833.html#a0b64736e63aa654bede19358cca3588c", null ],
-    [ "setFrequency", "class_m_d___a_d9833.html#ab04b9265aee43cbc5678ff7772ee0c1f", null ],
+    [ "setFrequency", "class_m_d___a_d9833.html#a8c441358f85c08270271603c4bd698a3", null ],
     [ "setMode", "class_m_d___a_d9833.html#a57b4c240384f25a9bc06a65d5d1901e7", null ],
     [ "setPhase", "class_m_d___a_d9833.html#a6cffbcec042d5eee2a18b84c5ce25552", null ]
 ];

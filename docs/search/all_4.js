@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['getactivefrequency',['getActiveFrequency',['../class_m_d___a_d9833.html#a947eef2d0f5ccb8e56441b741f1d7487',1,'MD_AD9833']]],
-  ['getactivephase',['getActivePhase',['../class_m_d___a_d9833.html#ab8663778999fd5b1262f7f2661bd4bb9',1,'MD_AD9833']]],
-  ['getfrequency',['getFrequency',['../class_m_d___a_d9833.html#abfb44b908e3efea8ae0422f89b063a7e',1,'MD_AD9833']]],
-  ['getmode',['getMode',['../class_m_d___a_d9833.html#a18b799d4b2f1162bfcd68a2c81f6c571',1,'MD_AD9833']]],
-  ['getphase',['getPhase',['../class_m_d___a_d9833.html#aa825c7a6896ba1fc1a2b2943053f8336',1,'MD_AD9833']]]
+  ['md_5fad9833_29',['MD_AD9833',['../class_m_d___a_d9833.html',1,'MD_AD9833'],['../class_m_d___a_d9833.html#a92d53cd8ed35472088801854d80cd4be',1,'MD_AD9833::MD_AD9833(uint8_t dataPin, uint8_t clkPin, uint8_t fsyncPin)'],['../class_m_d___a_d9833.html#a867b6ad0cdb2412d6b34206b81fedc3e',1,'MD_AD9833::MD_AD9833(uint8_t fsyncPin)']]],
+  ['md_5fad9833_2ecpp_30',['MD_AD9833.cpp',['../_m_d___a_d9833_8cpp.html',1,'']]],
+  ['md_5fad9833_2eh_31',['MD_AD9833.h',['../_m_d___a_d9833_8h.html',1,'']]],
+  ['md_5fad9833_5flib_2eh_32',['MD_AD9833_lib.h',['../_m_d___a_d9833__lib_8h.html',1,'']]],
+  ['mode_5foff_33',['MODE_OFF',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0adf3381086d391126bc76ff5c92144657',1,'MD_AD9833']]],
+  ['mode_5fsine_34',['MODE_SINE',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0ad7a4ab52bb1bee0ce39b7b54644a029d',1,'MD_AD9833']]],
+  ['mode_5fsquare1_35',['MODE_SQUARE1',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0a1a70af5aaa0d5270e739146befbcc2c1',1,'MD_AD9833']]],
+  ['mode_5fsquare2_36',['MODE_SQUARE2',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0aa40b5a6a51100ac0d1b926afe07bbfa6',1,'MD_AD9833']]],
+  ['mode_5ft_37',['mode_t',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0',1,'MD_AD9833']]],
+  ['mode_5ftriangle_38',['MODE_TRIANGLE',['../class_m_d___a_d9833.html#a0af29b0bc3883ccd8b5150bce814dfa0ae9c6b923a1b928aed747df397b3f7903',1,'MD_AD9833']]]
 ];

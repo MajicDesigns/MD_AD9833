@@ -29,6 +29,10 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
+Sep 2020 version 1.2
+- Added reset() method
+- Test example converted to use MD_cmdProcessor
+
 Feb 2019 version 1.1.3
 - Fixed compile error at MD_AD9833.cpp:257:77
 - Some minor reorganizing of code
@@ -143,8 +147,20 @@ class MD_AD9833
   *
   * The AD9833 hardware is reset and set up to output a 1kHz Sine wave, 0 degrees
   * phase angle, CHAN_0 is selected as source for frequency and phase output.
+  * 
   */
   void begin(void);
+
+  /**
+   * Reset the AD9833 hardware output
+   * 
+   * The AD9833 reset function resets appropriate internal registers to 0 to provide 
+   * an analog output of midscale. Reset does not reset the phase, frequency, or 
+   * control registers.
+   *
+   * \param hold  optional parameter that holds the reset state. Default is false (no hold).
+   */
+   void reset(bool hold = false);
 
  /**
   * Class Destructor.

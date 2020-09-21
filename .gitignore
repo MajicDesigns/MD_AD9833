@@ -44,6 +44,7 @@ ipch/
 [Bb]in
 [Dd]ebug*/
 [Rr]elease*/
+.[Vv]s/
 Ankh.NoLoad
 
 #Additional Atmel Studio files
