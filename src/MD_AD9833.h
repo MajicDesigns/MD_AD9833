@@ -29,7 +29,12 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
-Sep 2020 version 1.2
+Nov 2020 version 1.2.1
+- Modified basic example
+- Fixed reported issue with B28 setting on setFrequency() (discontinuity on freq change)
+- Fixed sequencing of FSYNC in spiSend()
+
+Sep 2020 version 1.2.0
 - Added reset() method
 - Test example converted to use MD_cmdProcessor
 

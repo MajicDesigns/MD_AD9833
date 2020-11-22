@@ -1,6 +1,8 @@
 // Basic MD_AD9833 test file
 //
 // Initialises the device to default conditions
+// 
+// Connect a pot to A0 to change the frequency by turning the pot
 //
 #include <MD_AD9833.h>
 #include <SPI.h>
@@ -20,4 +22,12 @@ void setup(void)
 
 void loop(void)
 {
+	static uint16_t lastv = 0;
+	uint16_t v = analogRead(A0);
+
+	if (abs(v-lastv) > 20)
+	{
+		AD.setFrequency(MD_AD9833::CHAN_0, 1000 + v);
+		lastv = v;
+	}
 }

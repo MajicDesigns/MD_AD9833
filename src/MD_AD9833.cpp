@@ -58,7 +58,6 @@ void MD_AD9833::spiSend(uint16_t data)
   dumpCmd(data);
 #endif // AD_DEBUG
 
-  digitalWrite(_fsyncPin, LOW);
   if (_hardwareSPI)
   {
     SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE2));
@@ -70,7 +69,6 @@ void MD_AD9833::spiSend(uint16_t data)
   else
   {
     digitalWrite(_fsyncPin, LOW);
-
     for (uint8_t i = 0; i < 16; i++)
     {
       digitalWrite(_dataPin, (data & 0x8000) ? HIGH : LOW);
@@ -79,7 +77,6 @@ void MD_AD9833::spiSend(uint16_t data)
       data <<= 1; // one less bit to do
     }
     digitalWrite(_dataPin, LOW); //idle low
-
     digitalWrite(_fsyncPin, HIGH);
   }
 }
@@ -136,7 +133,8 @@ void MD_AD9833::begin(void)
   digitalWrite(_fsyncPin, HIGH);
 
   _regCtl = 0;
-  bitSet(_regCtl, AD_B28);  // always write 2 words consecutively
+
+  bitSet(_regCtl, AD_B28);  // always write 2 words consecutively for frequency
   spiSend(_regCtl);
 
   reset(true);              // Reset and hold
@@ -273,9 +271,11 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
   }
 
   // Assumes B28 is on so we can send consecutive words
-  // B28 is set by default for the library
+  // B28 is set by default for the library, so just send it here
   // Now send the two parts of the frequency 14 bits at a time,
   // LSBs first
+
+  spiSend(_regCtl);   // set B28
   spiSend(freq_select | (uint16_t)(_regFreq[chan] & 0x3fff));
   spiSend(freq_select | (uint16_t)((_regFreq[chan] >> 14) & 0x3fff));
 
