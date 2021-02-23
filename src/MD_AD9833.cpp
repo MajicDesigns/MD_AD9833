@@ -198,6 +198,8 @@ boolean MD_AD9833::setMode(mode_t mode)
   {
   case MODE_OFF:
     PRINTS("OFF");
+    bitClear(_regCtl, AD_OPBITEN);
+    bitClear(_regCtl, AD_MODE);
     bitSet(_regCtl, AD_SLEEP1);
     bitSet(_regCtl, AD_SLEEP12);
     break;

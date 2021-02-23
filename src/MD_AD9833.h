@@ -29,6 +29,9 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
+Feb 2021 version 1.2.2
+- Fixed problem of SQ1 and SQ2 to off leaving high signal.
+
 Nov 2020 version 1.2.1
 - Modified basic example
 - Fixed reported issue with B28 setting on setFrequency() (discontinuity on freq change)
