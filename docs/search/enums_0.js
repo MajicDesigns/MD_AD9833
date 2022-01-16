@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['channel_5ft_83',['channel_t',['../class_m_d___a_d9833.html#ac870bc23df74953917354b3b0ba2e98c',1,'MD_AD9833']]]
+  ['channel_5ft_0',['channel_t',['../class_m_d___a_d9833.html#ac870bc23df74953917354b3b0ba2e98c',1,'MD_AD9833']]]
 ];

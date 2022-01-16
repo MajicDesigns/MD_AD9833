@@ -29,6 +29,9 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
+xxx yyyy version 1.2.3
+- Corrected documentation errors
+
 Feb 2021 version 1.2.2
 - Fixed problem of SQ1 and SQ2 to off leaving high signal.
 
@@ -98,7 +101,7 @@ class MD_AD9833
  /**
   * Channel enumerated type.
   *
-  * This enumerated type is used with the to specify which channel
+  * This enumerated type is used to specify which channel
   * is being invoked on operations that could be channel related.
   */
   enum channel_t
@@ -129,9 +132,9 @@ class MD_AD9833
   * connect the software to the hardware. Multiple instances may co-exist
   * but they should not share the same hardware Fsync pin (SPI interface).
   *
-  * \param dataPin		output on the Arduino where data gets shifted out.
-  * \param clkPin		  output for the clock signal.
-  * \param fsyncPin		output for selecting the device.
+  * \param dataPin    output on the Arduino where data gets shifted out.
+  * \param clkPin     output for the clock signal.
+  * \param fsyncPin   output for selecting the device.
   */
   MD_AD9833(uint8_t dataPin, uint8_t clkPin, uint8_t fsyncPin);
 
@@ -150,7 +153,7 @@ class MD_AD9833
  /**
   * Initialize the object.
   *
-  * Initialise the object data. This needs to be called during setup() to initialise new
+  * Initialize the object data. This needs to be called during setup() to initialize new
   * data for the class that cannot be done during the object creation.
   *
   * The AD9833 hardware is reset and set up to output a 1kHz Sine wave, 0 degrees
@@ -190,7 +193,7 @@ class MD_AD9833
   *
   * Get the last specified AD9833 channel output waveform.
   *
-  * \return last wave_t setting for the waveform
+  * \return last mode_t setting for the waveform
   */
   inline mode_t getMode(void) { return _modeLast; };
 
@@ -199,7 +202,7 @@ class MD_AD9833
    *
    * Set the specified AD9833 channel output waveform to one of the mode_t types.
    *
-   * \param mode  wave defined by one of the mode_t enumerations
+   * \param mode  wave output defined by one of the mode_t enumerations
    * \return true if successful, false otherwise
    */
   boolean setMode(mode_t mode);
@@ -254,16 +257,16 @@ class MD_AD9833
   /**
   * Get current phase output channel
   *
-  * Get the last specified AD9833 frequency output channel selection.
+  * Get the last specified AD9833 phase output channel selection.
   *
   * \return last phase setting for the waveform
   */
   channel_t getActivePhase(void);
 
   /**
-  * Set the frequency channel for output
+  * Set the phase channel for output
   *
-  * Set the specified AD9833 frequency setting as the output frequency.
+  * Set the specified AD9833 phase setting as the output phase.
   *
   * \param chan output channel identifier (channel_t)
   * \return true if successful, false otherwise
