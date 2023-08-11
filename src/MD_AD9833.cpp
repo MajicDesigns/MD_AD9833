@@ -254,7 +254,7 @@ uint16_t MD_AD9833::calcPhase(float a)
 
 boolean MD_AD9833::setFrequency(channel_t chan, float freq)
 {
-  uint16_t  freq_select;
+  uint16_t  freq_select = SEL_FREQ0;   // stop ESP32 compiler warnings
 
   PRINT("\nsetFreq CHAN_", chan);
 
@@ -286,7 +286,7 @@ boolean MD_AD9833::setFrequency(channel_t chan, float freq)
 
 boolean MD_AD9833::setPhase(channel_t chan, uint16_t phase)
 {
-  uint16_t  phase_select;
+  uint16_t  phase_select = SEL_PHASE0;     // stop ESP32 compiler warnings
 
   PRINT("\nsetPhase CHAN_", chan);
 

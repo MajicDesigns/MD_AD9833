@@ -1,4 +1,6 @@
 <map id="src/MD_AD9833.h" name="src/MD_AD9833.h">
-<area shape="rect" id="node1" title="Main header file for the MD_AD9833 library." alt="" coords="12,6,140,33"/>
-<area shape="rect" id="node3" href="$_m_d___a_d9833_8cpp.html" title="Main class definitions for AD_9833 library." alt="" coords="5,81,147,108"/>
+<area shape="rect" id="Node000001" title="Main header file for the MD_AD9833 library." alt="" coords="12,7,140,32"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="127,3,154,6,163,11,167,20,161,29,149,35,114,35,114,30,148,29,158,25,161,19,159,15,152,11,127,8"/>
+<area shape="rect" id="Node000002" href="$_m_d___a_d9833_8cpp.html" title="Main class definitions for AD_9833 library." alt="" coords="5,82,147,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,47,79,81,73,81,73,47"/>
 </map>

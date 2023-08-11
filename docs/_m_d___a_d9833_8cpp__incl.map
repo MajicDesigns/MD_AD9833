@@ -1,7 +1,12 @@
 <map id="src/MD_AD9833.cpp" name="src/MD_AD9833.cpp">
-<area shape="rect" id="node1" title="Main class definitions for AD_9833 library." alt="" coords="66,5,208,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,80,59,107"/>
-<area shape="rect" id="node5" href="$_m_d___a_d9833_8h.html" title="Main header file for the MD_AD9833 library." alt="" coords="84,80,191,107"/>
-<area shape="rect" id="node10" href="$_m_d___a_d9833__lib_8h.html" title="Includes library&#45;only definitions for AD_9833 library." alt="" coords="239,80,365,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="99,155,176,181"/>
+<area shape="rect" id="Node000001" title="Main class definitions for AD_9833 library." alt="" coords="66,6,208,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,59,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,34,62,75,58,71,119,29"/>
+<area shape="rect" id="Node000003" href="$_m_d___a_d9833_8h.html" title="Main header file for the MD_AD9833 library." alt="" coords="84,81,191,106"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,32,140,67,135,67,135,32"/>
+<area shape="rect" id="Node000005" href="$_m_d___a_d9833__lib_8h.html" title="Includes library&#45;only definitions for AD_9833 library." alt="" coords="239,81,365,106"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="165,29,265,73,263,78,162,34"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="170,78,201,78,213,84,217,93,214,101,207,107,184,110,183,105,205,102,210,98,212,93,209,88,200,84,170,83"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="99,155,176,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="140,107,140,141,135,141,135,107"/>
 </map>

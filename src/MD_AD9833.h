@@ -29,8 +29,9 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
-xxx yyyy version 1.2.3
+Aug 2023 version 1.2.3
 - Corrected documentation errors
+- Reworked code to prevent unncessary ESP32 compiler warnings
 
 Feb 2021 version 1.2.2
 - Fixed problem of SQ1 and SQ2 to off leaving high signal.

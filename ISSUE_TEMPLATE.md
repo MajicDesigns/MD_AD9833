@@ -10,7 +10,7 @@ Describe your issue here.
 ## Your Environment
 **Library Version:** 
 **Arduino IDE version:** 
-**Hardware model/type:** 
+**Microcontroller hardware:** 
 **OS and Version:** 
 
 ## Steps to Reproduce
