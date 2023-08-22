@@ -9,7 +9,7 @@
 // hardware using the library functions.
 //
 // Dependencies:
-// MD_cmdProcessor is available at https://github.com/MajicDesigns/MD_AD9833
+// MD_cmdProcessor is available at https://github.com/MajicDesigns/MD_cmdProcessor or Arduino Library Manager
 //
 
 #define ARRAY_SIZE(a) (sizeof(a)/sizeof(a[0]))

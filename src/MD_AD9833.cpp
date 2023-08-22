@@ -111,7 +111,7 @@ void MD_AD9833::reset(bool hold)
 }
 
 void MD_AD9833::begin(void)
-// Initialise the AD9833 and then set up safe values for the AD9833 device
+// Initialize the AD9833 and then set up safe values for the AD9833 device
 // Procedure from Figure 27 of in the AD9833 Data Sheet
 {
   // initialize the SPI interface
@@ -128,7 +128,7 @@ void MD_AD9833::begin(void)
     pinMode(_clkPin, OUTPUT);
   }
 
-  // initialise our preferred CS pin (could be same as SS)
+  // initialize our preferred CS pin (could be same as SS)
   pinMode(_fsyncPin, OUTPUT);
   digitalWrite(_fsyncPin, HIGH);
 
