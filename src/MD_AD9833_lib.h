@@ -10,25 +10,29 @@ See the main header file for full information
 * \brief Includes library-only definitions for AD_9833 library
 */
 
-#define	AD_DEBUG	0		///< Enable or disable (default) debugging output from the MD_AD9833 library
+#define	AD_DEBUG 0  ///< Enable or disable (default) debugging output from the MD_AD9833 library
 
 #if AD_DEBUG
-#define	PRINT(s, v)		{ Serial.print(F(s)); Serial.print(v); }		  ///< Print a string followed by a value (decimal)
-#define	PRINTX(s, v)	{ Serial.print(F(s)); Serial.print(" 0x"); Serial.print(v, HEX); }	///< Print a string followed by a value (hex)
-#define	PRINTB(s, v)	{ Serial.print(F(s)); Serial.print(v, BIN); }	///< Print a string followed by a value (binary)
-#define	PRINTS(s)		  { Serial.print(F(s)); }							          ///< Print a string
+#define	PRINT(s, v)  { Serial.print(F(s)); Serial.print(v); }     ///< Print a string followed by a value (decimal)
+#define	PRINTX(s, v) { Serial.print(F(s)); Serial.print(" 0x"); Serial.print(v, HEX); } ///< Print a string followed by a value (hex)
+#define	PRINTB(s, v) { Serial.print(F(s)); Serial.print(v, BIN); }  ///< Print a string followed by a value (binary)
+#define	PRINTS(s)    { Serial.print(F(s)); }                        ///< Print a string
 #else
-#define	PRINT(s, v)		///< Print a string followed by a value (decimal)
-#define	PRINTX(s, v)	///< Print a string followed by a value (hex)
-#define	PRINTB(s, v)	///< Print a string followed by a value (binary)
-#define	PRINTS(s)		  ///< Print a string
+#define	PRINT(s, v)   ///< Print a string followed by a value (decimal)
+#define	PRINTX(s, v)  ///< Print a string followed by a value (hex)
+#define	PRINTB(s, v)  ///< Print a string followed by a value (binary)
+#define	PRINTS(s)     ///< Print a string
 #endif
 
 /** \name Library defaults
  * @{
  */
-#define AD_DEFAULT_FREQ   1000  ///< Default initialisation frequency (Hz)
-#define AD_DEFAULT_PHASE  0     ///< Default initialisation phase angle (degrees)
+#ifndef AD_DEFAULT_FREQ
+#define AD_DEFAULT_FREQ   1000  ///< Default initialization frequency (Hz)
+#endif
+#ifndef AD_DEFAULT_PHASE
+#define AD_DEFAULT_PHASE  0     ///< Default initialization phase angle (degrees)
+#endif
 
 /** @}*/ 
 
@@ -83,7 +87,9 @@ const uint8_t AD_PHASE = 13;    ///< Select the phase register
 
 /** \name AD9833 frequency and phase calculation macros
 * @{ */
+#ifndef AD_MCLK
 #define AD_MCLK   25000000UL  ///< Clock speed of the AD9833 reference clock in Hz
+#endif
 #define AD_2POW28 (1UL << 28) ///< Used when calculating output frequency
 
 /** @} */
