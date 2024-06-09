@@ -21,6 +21,8 @@ getActiveFrequency	KEYWORD2
 setActiveFrequency	KEYWORD2
 getFrequency	KEYWORD2
 setFrequency	KEYWORD2
+getClk()	KEYWORD2
+setClk()	KEYWORD2
 getActivePhase	KEYWORD2
 setActivePhase	KEYWORD2
 getPhase	KEYWORD2

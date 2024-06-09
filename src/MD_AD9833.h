@@ -29,6 +29,9 @@ Topics
 - \subpage pageDonation
 
 \page pageRevHistory Revision History
+Jun 2024 version 1.3.0
+- Added get/setClk() methods for clock reference frequency
+
 Aug 2023 version 1.2.4
 - Changed some #defines to be bracketed by #ifndef
 
@@ -196,15 +199,19 @@ class MD_AD9833
   * Get channel output waveform
   *
   * Get the last specified AD9833 channel output waveform.
+  * 
+  * \sa setMode()
   *
   * \return last mode_t setting for the waveform
   */
-  inline mode_t getMode(void) { return _modeLast; };
+  inline mode_t getMode(void) { return _modeLast; }
 
   /**
    * Set channel output mode
    *
    * Set the specified AD9833 channel output waveform to one of the mode_t types.
+   * 
+   * \sa getMode()
    *
    * \param mode  wave output defined by one of the mode_t enumerations
    * \return true if successful, false otherwise
@@ -215,6 +222,8 @@ class MD_AD9833
   * Get current frequency output channel
   *
   * Get the last specified AD9833 frequency output channel selection.
+  * 
+  * \sa setActiveFrequency()
   *
   * \return last frequency setting for the waveform
   */
@@ -225,6 +234,8 @@ class MD_AD9833
   *
   * Set the specified AD9833 frequency setting as the output frequency.
   *
+  * \sa getActiveFrequency()
+  *
   * \param chan output channel identifier (channel_t)
   * \return true if successful, false otherwise
   */
@@ -234,16 +245,20 @@ class MD_AD9833
   * Get channel frequency
   *
   * Get the last specified AD9833 channel output frequency.
+  * 
+  * \sa setFrequency()
   *
   * \param chan output channel identifier (channel_t)
   * \return the last frequency setting for the specified channel
   */
-  inline float getFrequency(channel_t chan) const { return _freq[chan]; };
+  inline float getFrequency(channel_t chan) { return _freq[chan]; }
 
   /**
   * Set channel frequency
   *
   * Set the specified AD9833 channel output frequency.
+  * 
+  * \sa getFrequency()
   *
   * \param chan output channel identifier (channel_t)
   * \param freq frequency in Hz
@@ -251,6 +266,31 @@ class MD_AD9833
   */
   boolean setFrequency(channel_t chan, float freq);
 
+  /**
+  * Get AD9833 reference clock frequency
+  *
+  * Get the last specified AD9833 reference clock frequency.
+  * 
+  * \sa setClk()
+  *
+  * \return the last frequency setting for the specified channel
+  */
+  inline uint32_t getClk(void) { return _mClk; }
+
+  /**
+  * Set AD9833 reference clock frequency
+  *
+  * Set the specified AD9833 reference clock frequency.
+  * 
+  * The library sets the value SD_MCLK at initializations, which
+  * will be suitable for most applications.
+  * 
+  * \sa getClk()
+  *
+  * \param reference freq frequency in Hz
+  */
+  void setClk(uint32_t freq) { _mClk = freq; }
+  
   /** @} */
 
 
@@ -262,6 +302,8 @@ class MD_AD9833
   * Get current phase output channel
   *
   * Get the last specified AD9833 phase output channel selection.
+  * 
+  * \sa setActivePhase()
   *
   * \return last phase setting for the waveform
   */
@@ -272,6 +314,8 @@ class MD_AD9833
   *
   * Set the specified AD9833 phase setting as the output phase.
   *
+  * \sa getActivePhase()
+  *
   * \param chan output channel identifier (channel_t)
   * \return true if successful, false otherwise
   */
@@ -281,6 +325,8 @@ class MD_AD9833
   * Get channel phase
   *
   * Get the last specified AD9833 channel phase setting in tenths of a degree.
+  * 
+  * \sa setPhase()
   *
   * \param chan output channel identifier (channel_t)
   * \return the last phase setting in degrees [0..3600] for the specified channel
@@ -292,6 +338,8 @@ class MD_AD9833
   *
   * Set the specified AD9833 channel output phase in tenths of a degree.
   * 100.1 degrees is passed as 1001.
+  *
+  * \sa getPhase()
   *
   * \param chan output channel identifier (channel_t)
   * \param phase in tenths of a degree [0..3600]
@@ -311,6 +359,7 @@ private:
   mode_t    _modeLast;    // last set mode
   float     _freq[2];     // last frequencies set
   uint16_t  _phase[2];    // last phase setting
+  uint32_t  _mClk;        // reference clock frequency
 
   // SPI interface data
   uint8_t _dataPin;     // DATA is shifted out of this pin ...

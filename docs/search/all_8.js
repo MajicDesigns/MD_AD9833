@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7emd_5fad9833_0',['~MD_AD9833',['../class_m_d___a_d9833.html#af667a5a6fa1be07d44e3b516cdcff0c8',1,'MD_AD9833']]]
+  ['reset_0',['reset',['../class_m_d___a_d9833.html#a31bdf3f3366d336c46787284c9262c1a',1,'MD_AD9833']]],
+  ['revision_20history_1',['Revision History',['../page_rev_history.html',1,'index']]]
 ];

@@ -138,6 +138,7 @@ void MD_AD9833::begin(void)
   spiSend(_regCtl);
 
   reset(true);              // Reset and hold
+  setClk(AD_MCLK);
   setFrequency(CHAN_0, AD_DEFAULT_FREQ);
   setFrequency(CHAN_1, AD_DEFAULT_FREQ);
   setPhase(CHAN_0, AD_DEFAULT_PHASE);
@@ -241,13 +242,15 @@ boolean MD_AD9833::setMode(mode_t mode)
 }
 
 uint32_t MD_AD9833::calcFreq(float f) 
-// Calculate register value for AD9833 frequency register from a frequency
+// Calculate register value for AD9833 frequency register 
+// from the specified frequency
 { 
-  return (uint32_t)((f * AD_2POW28/AD_MCLK) + 0.5);
+  return (uint32_t)((f * AD_2POW28/_mClk) + 0.5);
 }
 
 uint16_t MD_AD9833::calcPhase(float a) 
-// Calculate the value for AD9833 phase register from given phase in tenths of a degree
+// Calculate the value for AD9833 phase register from given 
+// phase in tenths of a degree
 {
   return (uint16_t)((512.0 * (a/10) / 45) + 0.5);
 }
